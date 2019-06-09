@@ -1,0 +1,7 @@
+Hi {{usernema}}
+
+The user {{username}} has invinted you for his event {{event}}
+
+Place: {{event.where}}
+
+Time: {{event.when}}
