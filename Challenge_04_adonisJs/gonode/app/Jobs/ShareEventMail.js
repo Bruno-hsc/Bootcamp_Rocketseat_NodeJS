@@ -13,16 +13,12 @@ class ShareEventMail {
 
   async handle ({ email, username, event }) {
     console.log(`Job:${ShareEventMail.key}`)
-    await Mail.send(
-      ['emails.share_event'],
-      { username, event },
-      message => {
-        message
-          .to(email)
-          .from('brunohenriquescosta@hotmail.com')
-          .subject(`Event:${event.name}`)
-      }
-    )
+    await Mail.send(['emails.share_event'], { username, event }, message => {
+      message
+        .to(email)
+        .from('brunohenriquescosta2@hotmail.com', 'Bruno')
+        .subject(`Event:${event.name}`)
+    })
   }
 }
 

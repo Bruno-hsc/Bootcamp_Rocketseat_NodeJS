@@ -6,7 +6,7 @@ const Job = use('App/Jobs/ShareEventMail')
 
 class ShareEventController {
   async share ({ request, response, params, auth }) {
-    const event = await Calendar.findOrFail(params.calendars_id)
+    const event = await Calendar.findOrFail(params.calendar_id)
     const email = request.input('email')
 
     if (event.user_id !== auth.user.id) {
