@@ -31,7 +31,7 @@ Route.group(() => {
     )
 
   Route.post(
-    'calendar/calendar_id/share',
+    'calendar/:calendar_id/share',
     'ShareEventController.share'
   ).validator('Calendar/Share')
 }).middleware('auth')
